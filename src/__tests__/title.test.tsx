@@ -1,5 +1,4 @@
 import Title from "@/app/components/Title";
-import Home from "@/app/page";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
