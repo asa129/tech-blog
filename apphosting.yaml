@@ -6,10 +6,6 @@ runConfig:
   # concurrency: 80
   # cpu: 1
   # memoryMiB: 512
-
-runtime: nodejs20 # Node.jsバージョン
-
-npmScript: build:with-test
 # Environment variables and secrets.
 # env:
 # Configure environment variables.
