@@ -9,21 +9,7 @@ runConfig:
 
 runtime: nodejs20 # Node.jsバージョン
 
-# ビルド設定
-buildCommand: |
-  # テストの実行
-  echo "Running tests..."
-  npm run test
-
-  # テストが成功したらビルドを実行
-  if [ $? -eq 0 ]; then
-    echo "Tests passed! Building application..."
-    npm run build
-  else
-    echo "Tests failed! Stopping deployment."
-    exit 1
-  fi
-
+npmScript: build:with-test
 # Environment variables and secrets.
 # env:
 # Configure environment variables.
