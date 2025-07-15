@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "build:with-test": "npm run test && npm run build"
+    "prebuild": "echo '🧪 Running tests...' && npm run test"
   },
   "dependencies": {
     "firebase": "^11.10.0",
