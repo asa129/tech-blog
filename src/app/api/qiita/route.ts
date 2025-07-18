@@ -4,8 +4,8 @@ import { NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request, res: NextApiResponse) {
-  const url = process.env.NEXT_PUBLIC_QIITA_API_URL!;
-  const token = process.env.NEXT_PUBLIC_QIITA_API_TOKEN!;
+  const url = process.env.QIITA_API_URL!;
+  const token = process.env.QIITA_API_TOKEN!;
   const data = await fetch(`${url}?page=1&per_page=4`, {
     headers: {
       Authorization: `Bearer ${token}`,
