@@ -1,11 +1,16 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Title() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline" data-testid="title">
-        Hello World!!!
-      </h1>
+      <Link href="/">
+        <div className="navbar bg-base-100 shadow-sm">
+          <div className="btn btn-ghost text-xl" data-testid="title">
+            My Tech Blog
+          </div>
+        </div>
+      </Link>
     </>
   );
 }

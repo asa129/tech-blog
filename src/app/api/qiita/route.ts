@@ -1,12 +1,17 @@
 export const runtime = "nodejs";
 
 import { NextApiResponse } from "next";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: Request, res: NextApiResponse) {
-  const url = process.env.QIITA_API_URL!;
-  const token = process.env.QIITA_API_TOKEN!;
-  const data = await fetch(`${url}?page=1&per_page=4`, {
+export async function GET(req: NextRequest, res: NextApiResponse) {
+  const endpoint = req.url.split("?")[1];
+
+  const apiUrl: string = process.env.QIITA_API_URL!;
+  const token: string = process.env.QIITA_API_TOKEN!;
+
+  const url = endpoint === "home" ? `${apiUrl}?page=1&per_page=4` : apiUrl;
+
+  const data = await fetch(url, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
