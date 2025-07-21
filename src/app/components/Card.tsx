@@ -11,6 +11,7 @@ export default async function Card({ endpoint }: { endpoint: string }) {
 
   if (apiEndpoint === "cms") {
     data = data.contents;
+    console.log(data);
   } else if (apiEndpoint === "qiita") {
     const res = await fetch(`http://localhost:3000/api/ogp`, {
       cache: "no-store",
@@ -38,7 +39,11 @@ export default async function Card({ endpoint }: { endpoint: string }) {
                 <div className="card bg-base-100 shadow-sm hover:shadow-lg transition-all duration-300">
                   <figure>
                     <img
-                      src={item.imageUrl === null ? item.url : item.imageUrl}
+                      src={
+                        apiEndpoint === "cms"
+                          ? item.thumbnail.url
+                          : item.imageUrl
+                      }
                     />
                   </figure>
                   <div className="card-body">
