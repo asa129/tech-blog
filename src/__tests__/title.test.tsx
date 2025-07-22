@@ -6,6 +6,6 @@ describe("Title Test", () => {
   it("タイトルコンポーネントがhello worldになっていること", async () => {
     render(<Title />);
     const title = await screen.findByTestId("title");
-    expect(title).toHaveTextContent("Hello World!");
+    expect(title).toHaveTextContent("My Tech Blog");
   });
 });
