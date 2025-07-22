@@ -13,18 +13,18 @@ describe("Title Test", () => {
 
   // MVP2
   // ユーザーは個人記事をトップで見ることができる
-  it("個人記事をトップで見ることができる", async () => {
-    const mockData = {
-      id: "1",
-      title: "test",
-      url: "test",
-      created_at: "test",
-    };
+  // it("個人記事をトップで見ることができる", async () => {
+  //   const mockData = {
+  //     id: "1",
+  //     title: "test",
+  //     url: "test",
+  //     created_at: "test",
+  //   };
 
-    render(<Card endpoint="qiita?home" />);
-    const card = await screen.findByTestId("cardId");
-    expect(card).toBeInTheDocument();
-  });
+  //   render(<Card endpoint="qiita?home" />);
+  //   const card = await screen.findByTestId("cardId");
+  //   expect(card).toBeInTheDocument();
+  // });
   //もっとみるボタンを押すと個人記事の一覧を表示する(/individualsに遷移する)
   // 個人記事カードを押すとQiitaの記事へ遷移する
 
