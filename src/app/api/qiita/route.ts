@@ -15,6 +15,7 @@ export async function GET(req: NextRequest) {
       Authorization: `Bearer ${token}`,
     },
   });
+
   if (data.status !== 200) {
     return NextResponse.json(
       { error: "Failed to fetch data" },
