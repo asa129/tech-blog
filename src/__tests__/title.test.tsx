@@ -1,10 +1,11 @@
-import Card from "@/app/components/Card";
+import CardList from "@/app/components/CardList";
+import MoreButton from "@/app/components/MoreButton";
 import Title from "@/app/components/Title";
-import Home from "@/app/page";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
-describe("Title Test", () => {
+describe("Tech Blog Test", () => {
+  // MVP1
   it("タイトルコンポーネントがMy Tech Blogになっていること", async () => {
     render(<Title />);
     const title = await screen.findByTestId("title");
@@ -12,20 +13,25 @@ describe("Title Test", () => {
   });
 
   // MVP2
-  // ユーザーは個人記事をトップで見ることができる
-  // it("個人記事をトップで見ることができる", async () => {
-  //   const mockData = {
-  //     id: "1",
-  //     title: "test",
-  //     url: "test",
-  //     created_at: "test",
-  //   };
-
-  //   render(<Card endpoint="qiita?home" />);
-  //   const card = await screen.findByTestId("cardId");
-  //   expect(card).toBeInTheDocument();
-  // });
+  it("ユーザーは個人記事をトップで見ることができる", async () => {
+    const data = [
+      {
+        id: "1",
+        title: "test",
+        url: "test",
+        created_at: "test",
+      },
+    ];
+    render(<CardList data={data} apiEndpoint="qiita?home" />);
+    const card = await screen.findByTestId("cardId");
+    expect(card).toBeInTheDocument();
+  });
   //もっとみるボタンを押すと個人記事の一覧を表示する(/individualsに遷移する)
+  it("もっとみるボタンを押すと個人記事の一覧を表示する(/individualsに遷移する)", async () => {
+    render(<MoreButton href="/individuals" />);
+    const button = await screen.findByTestId("moreButton");
+    expect(button).toBeInTheDocument();
+  });
   // 個人記事カードを押すとQiitaの記事へ遷移する
 
   // MVP3
