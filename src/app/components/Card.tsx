@@ -11,7 +11,6 @@ export default async function Card({ endpoint }: { endpoint: string }) {
 
   if (apiEndpoint === "cms") {
     data = data.contents;
-    console.log(data);
   } else if (apiEndpoint === "qiita") {
     const res = await fetch(`http://localhost:3000/api/ogp`, {
       cache: "no-store",
@@ -19,8 +18,10 @@ export default async function Card({ endpoint }: { endpoint: string }) {
       body: JSON.stringify({ data }),
     });
     const imageData = await res.json();
+    // eslint-disable-next-line
     data.map((item: any) => {
       item.imageUrl = imageData.find(
+        // eslint-disable-next-line
         (data: any) => data.id === item.id
       )?.ogpImage;
     });
@@ -29,34 +30,40 @@ export default async function Card({ endpoint }: { endpoint: string }) {
   return (
     <>
       <div className="mt-10 grid grid-cols-1 md:grid-cols-4 gap-2">
-        {data.map((item: any) => {
-          return (
-            <div key={item.id}>
-              <Link
-                href={apiEndpoint === "cms" ? `blogs/${item.id}` : item.url}
-                target="_blank"
-              >
-                <div className="card bg-base-100 shadow-sm hover:shadow-lg transition-all duration-300">
-                  <figure>
-                    <img
-                      src={
-                        apiEndpoint === "cms"
-                          ? item.thumbnail.url
-                          : item.imageUrl
-                      }
-                    />
-                  </figure>
-                  <div className="card-body">
-                    <h2 className="card-title line-clamp-2">{item.title}</h2>
-                    <p>
-                      {apiEndpoint === "cms" ? item.updatedAt : item.created_at}
-                    </p>
+        {
+          // eslint-disable-next-line
+          data.map((item: any) => {
+            return (
+              <div key={item.id}>
+                <Link
+                  href={apiEndpoint === "cms" ? `blogs/${item.id}` : item.url}
+                  target="_blank"
+                >
+                  <div className="card bg-base-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <figure>
+                      <img
+                        src={
+                          apiEndpoint === "cms"
+                            ? item.thumbnail.url
+                            : item.imageUrl
+                        }
+                        alt="サムネ画像"
+                      />
+                    </figure>
+                    <div className="card-body">
+                      <h2 className="card-title line-clamp-2">{item.title}</h2>
+                      <p>
+                        {apiEndpoint === "cms"
+                          ? item.updatedAt
+                          : item.created_at}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-          );
-        })}
+                </Link>
+              </div>
+            );
+          })
+        }
       </div>
     </>
   );

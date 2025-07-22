@@ -1,10 +1,12 @@
 import React from "react";
 import Card from "../components/Card";
+import Pagination from "../components/Pagination";
 
 export default function page() {
   return (
-    <div>
-      <h1>ブログ記事一覧</h1>
+    <div className="my-10 mx-10">
+      <h1 className="font-bold text-2xl">ブログ記事一覧</h1>
+      <Pagination />
       <Card endpoint="cms" />
     </div>
   );

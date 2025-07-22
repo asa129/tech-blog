@@ -1,12 +1,12 @@
 export const runtime = "nodejs";
 
-import { NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 import { load } from "cheerio";
 
-export async function POST(req: NextRequest, res: NextApiResponse) {
+export async function POST(req: NextRequest) {
   const body = await req.json();
 
+  // eslint-disable-next-line
   const promise = body.data.map(async (item: any) => {
     const url = item.url;
     const res = await fetch(url, {

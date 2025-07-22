@@ -1,9 +1,8 @@
 export const runtime = "nodejs";
 
-import { NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextRequest, res: NextApiResponse) {
+export async function GET(req: NextRequest) {
   const endpoint = req.url.split("?")[1];
 
   const apiUrl: string = process.env.QIITA_API_URL!;

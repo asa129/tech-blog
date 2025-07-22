@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Title from "./components/Title";
 import Card from "./components/Card";
 import Link from "next/link";
 
