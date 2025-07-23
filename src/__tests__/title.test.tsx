@@ -20,7 +20,20 @@ describe("Tech Blog Test", () => {
         id: "1",
         title: "test",
         url: "test",
-        created_at: "test",
+        createdAt: "test",
+        updatedAt: "test",
+        publishedAt: "test",
+        revisedAt: "test",
+        description: "test",
+        content: "test",
+        thumbnail: {
+          url: "test",
+          height: 1,
+          width: 1,
+        },
+        tags: ["test"],
+        writer: "test",
+        imageUrl: "test",
       },
     ];
     render(<CardList data={data} apiEndpoint="qiita?home" />);
