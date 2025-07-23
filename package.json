@@ -12,6 +12,7 @@
     "json-server": "json-server --watch src/data/sample.json --port 3001"
   },
   "dependencies": {
+    "@testing-library/user-event": "^14.6.1",
     "@types/cheerio": "^0.22.35",
     "cheerio": "^1.1.1",
     "firebase": "^11.10.0",

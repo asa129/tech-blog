@@ -3,6 +3,7 @@ import MoreButton from "@/app/components/MoreButton";
 import Title from "@/app/components/Title";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 describe("Tech Blog Test", () => {
   // MVP1
@@ -28,6 +29,7 @@ describe("Tech Blog Test", () => {
   });
   //もっとみるボタンを押すと個人記事の一覧を表示する(/individualsに遷移する)
   it("もっとみるボタンを押すと個人記事の一覧を表示する(/individualsに遷移する)", async () => {
+    const user = userEvent.setup();
     render(<MoreButton href="/individuals" />);
     const button = await screen.findByTestId("moreButton");
     expect(button).toBeInTheDocument();

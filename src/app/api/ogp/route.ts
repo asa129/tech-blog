@@ -2,13 +2,13 @@ export const runtime = "nodejs";
 
 import { NextRequest, NextResponse } from "next/server";
 import { load } from "cheerio";
+import { Articles } from "@/app/domain/Articles";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
 
-  // eslint-dsisable-next-line
-  const promise = body.data.map(async (item: any) => {
-    const url = item.url;
+  const promise = body.data.map(async (item: Articles) => {
+    const url = item.url!;
     const res = await fetch(url, {
       headers: {
         "X-Linkpreview-Api-Key": process.env.LINKPREVIEW_API_KEY!,
