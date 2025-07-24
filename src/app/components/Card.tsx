@@ -3,7 +3,7 @@ import CardList from "./CardList";
 import { Articles } from "../domain/Articles";
 
 export default async function Card({ endpoint }: { endpoint: string }) {
-  const res = await fetch(`http://localhost:3000/api/${endpoint}`, {
+  const res = await fetch(`${process.env.API_URL}/api/${endpoint}`, {
     cache: "no-store",
   });
   let data = await res.json();
@@ -34,7 +34,7 @@ export default async function Card({ endpoint }: { endpoint: string }) {
   });
 
   if (apiEndpoint === "qiita") {
-    const res = await fetch(`http://localhost:3000/api/ogp`, {
+    const res = await fetch(`${process.env.API_URL}/api/ogp`, {
       cache: "no-store",
       method: "POST",
       body: JSON.stringify({ data }),
