@@ -18,6 +18,7 @@ export default function CardList({
             <Link
               href={apiEndpoint === "cms" ? `blogs/${item.id}` : item.url!}
               target="_blank"
+              data-testid="cardLink"
             >
               <div className="card bg-base-100 shadow-sm hover:shadow-lg transition-all duration-300">
                 <figure>
