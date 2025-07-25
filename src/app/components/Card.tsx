@@ -4,7 +4,9 @@ import { Articles } from "../domain/Articles";
 
 export default async function Card({ endpoint }: { endpoint: string }) {
   const res = await fetch(`${process.env.API_URL}/api/${endpoint}`, {
-    cache: "no-store",
+    next: {
+      revalidate: 300,
+    },
   });
   let data = await res.json();
 
