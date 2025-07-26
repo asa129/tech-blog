@@ -15,11 +15,12 @@ Tech Blog
 
 ## 使用技術
 
-![React](https://img.shields.io/badge/React-19.1.0-61DAFB?logo=react&logoColor=white)
+![React](https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-~5.8.3-3178C6?logo=typescript&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-15.3.5-06B6D4?logo=nextdotjs&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.0-06B6D4?logo=tailwindcss&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0.0-06B6D4?logo=tailwindcss&logoColor=white)
 ![DaisyUI](https://img.shields.io/badge/DaisyUI-5.0.46-06B6D4?logo=daisyui&logoColor=white)
+![Cheerio](https://img.shields.io/badge/Cheerio-1.1.1-06B6D4?logo=cheerio&logoColor=white)
 
 ![Firebase](https://img.shields.io/badge/Firebase-11.7.3-FFCA28?logo=firebase&logoColor=white)
 ![Firebase App Hosting](https://img.shields.io/badge/FirebaseAppHosting-11.7.3-FFCA28?logo=firebase&logoColor=white)
