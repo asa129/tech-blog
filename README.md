@@ -36,15 +36,17 @@ Tech Blog
 
 ### 1.リポジトリをクローン
 
-````bash
+```bash
 $ git clone https://github.com/asa129/tech-blog
 $ cd tech-blog
+```
 
 
 ### 2.パッケージインストール
 
 ```bash
 $ npm install
+```
 
 
 ### 3.環境変数を設定
@@ -74,4 +76,3 @@ npm run dev
 
 ### 5.ブラウザで URL にアクセス
 
-````
