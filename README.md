@@ -37,26 +37,28 @@ Tech Blog
 
 ### 1.リポジトリをクローン
 
-````bash
+```bash
 $ git clone https://github.com/asa129/tech-blog
 $ cd tech-blog
+```
 
 
 ### 2.パッケージインストール
 
 ```bash
 $ npm install
+```
 
 
 ### 3.環境変数を設定
 
 必要な API キー、アクセストークン、URL
 
-- Qiita
+- Qiita：
 https://qiita.com/api/v2/docs
-- MicroCMS
+- MicroCMS：
 https://microcms.io/
-- LINKPREVIEW
+- LINKPREVIEW：
 https://my.linkpreview.net/
 
 `.env.example`を`.env`に変更して、以下を設定してください
@@ -74,5 +76,4 @@ npm run dev
 ```
 
 ### 5.ブラウザで URL にアクセス
-
-````
+http://localhost:3000
