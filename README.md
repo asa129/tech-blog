@@ -17,10 +17,10 @@ Tech Blog
 
 ![React](https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-~5.8.3-3178C6?logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-15.3.5-06B6D4?logo=nextdotjs&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-15.3.5-000000?logo=nextdotjs&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0.0-06B6D4?logo=tailwindcss&logoColor=white)
-![DaisyUI](https://img.shields.io/badge/DaisyUI-5.0.46-06B6D4?logo=daisyui&logoColor=white)
-![Cheerio](https://img.shields.io/badge/Cheerio-1.1.1-06B6D4?logo=cheerio&logoColor=white)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-5.0.46-1AD1A5?logo=daisyui&logoColor=white)
+![Cheerio](https://img.shields.io/badge/Cheerio-1.1.1-E88C1F?logo=cheerio&logoColor=white)
 
 ![Firebase](https://img.shields.io/badge/Firebase-11.7.3-FFCA28?logo=firebase&logoColor=white)
 ![Firebase App Hosting](https://img.shields.io/badge/FirebaseAppHosting-11.7.3-FFCA28?logo=firebase&logoColor=white)
@@ -42,24 +42,22 @@ $ git clone https://github.com/asa129/tech-blog
 $ cd tech-blog
 ```
 
-
 ### 2.パッケージインストール
 
 ```bash
 $ npm install
 ```
 
-
 ### 3.環境変数を設定
 
 必要な API キー、アクセストークン、URL
 
 - Qiita：
-https://qiita.com/api/v2/docs
+  https://qiita.com/api/v2/docs
 - MicroCMS：
-https://microcms.io/
+  https://microcms.io/
 - LINKPREVIEW：
-https://my.linkpreview.net/
+  https://my.linkpreview.net/
 
 `.env.example`を`.env`に変更して、以下を設定してください
 
@@ -76,4 +74,5 @@ npm run dev
 ```
 
 ### 5.ブラウザで URL にアクセス
+
 http://localhost:3000
