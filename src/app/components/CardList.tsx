@@ -49,7 +49,11 @@ export default function CardList({
                   </figure>
                   <div className="card-body">
                     <h2 className="card-title line-clamp-2">{item.title}</h2>
-                    <p>{item.createdAt}</p>
+                    <p>
+                      {apiEndpoint === "cms"
+                        ? item.createdAt.split("T")[0]
+                        : item.created_at.split("T")[0]}
+                    </p>
                   </div>
                 </div>
               </Link>

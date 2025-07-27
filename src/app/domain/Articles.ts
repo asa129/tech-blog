@@ -1,4 +1,5 @@
 export interface Articles {
+  created_at: string;
   id: string;
   createdAt: string;
   updatedAt: string;

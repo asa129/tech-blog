@@ -22,6 +22,7 @@ export default async function Card({ endpoint }: { endpoint: string }) {
     return {
       id: item.id,
       createdAt: item.createdAt,
+      created_at: item.created_at,
       updatedAt: item.updatedAt,
       publishedAt: item.publishedAt,
       revisedAt: item.revisedAt,

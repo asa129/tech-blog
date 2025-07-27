@@ -9,6 +9,7 @@ const data = [
     title: "test",
     url: "testUrl",
     createdAt: "test",
+    created_at: "test",
     updatedAt: "test",
     publishedAt: "test",
     revisedAt: "test",
