@@ -14,10 +14,6 @@ export default async function Card({ endpoint }: { endpoint: string }) {
 
   let articles: Articles[] = [];
 
-  if (apiEndpoint === "cms") {
-    data = data.contents;
-  }
-
   articles = data.map((item: Articles) => {
     return {
       id: item.id,
